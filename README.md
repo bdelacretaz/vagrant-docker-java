@@ -15,3 +15,5 @@ To run this, start the Vagrant box with "vagrant up" and once it's up do:
 
 Which should show the / folder of the Docker ubuntu image, demonstrating that
 Docker works in this Vagrant VM.
+
+The first startup takes a while as it's downloading the Vagrant image (maybe), Puppet, Docker etc.
