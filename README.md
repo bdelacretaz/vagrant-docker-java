@@ -10,8 +10,8 @@ Inspired by https://bitbucket.org/durdn/stash-vagrant-install
 
 To run this, start the Vagrant box with "vagrant up" and once it's up do:
 
-  vagrant ssh
-  sudo docker run -i -t ubuntu ls /
+    vagrant ssh
+    sudo docker run -i -t ubuntu ls /
 
 Which should show the / folder of the Docker ubuntu image, demonstrating that
 Docker works in this Vagrant VM.
