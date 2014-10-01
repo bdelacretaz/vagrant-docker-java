@@ -42,9 +42,15 @@ class must-have {
         include_src => false
     }
 
+  exec { 'apt-get update 3':
+    command => '/usr/bin/apt-get update',
+    require => [ Apt::Source['docker'] ]
+  }
+
   package { 'raring-kernel':
         name => 'linux-image-generic-lts-raring',
-        ensure => present
+        ensure => present,
+        require => Exec["apt-get update 3"],
     }
 
   package { 'lxc-docker':
